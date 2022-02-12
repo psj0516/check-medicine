@@ -1,9 +1,13 @@
-const Home =()=> {
-    return (
-        <div>
-            Home
-        </div>
-    )
-}
+import { Fragment } from "react";
+import Menu from "../components/Menu";
 
-export default Home
+const Home = () => {
+  return (
+    <Fragment>
+      <Menu />
+      <div>Home</div>
+    </Fragment>
+  );
+};
+
+export default Home;
