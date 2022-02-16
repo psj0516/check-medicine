@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Fragment, useEffect, useState } from "react";
-import Menu from "../components/Menu";
+import Menu from "components/Menu";
 import Parser from "html-react-parser";
 
 const Medicine = () => {

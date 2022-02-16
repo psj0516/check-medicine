@@ -1,0 +1,11 @@
+.cat-container {
+    display: flex;
+}
+
+.category {
+    margin: 5px;
+}
+
+.category.active, .category:active {
+    color: brown;
+}
