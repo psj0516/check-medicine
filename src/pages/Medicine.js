@@ -2,6 +2,7 @@ import axios from "axios";
 import { Fragment, useEffect, useState } from "react";
 import Menu from "components/Menu";
 import Parser from "html-react-parser";
+import Footer from "components/Footer";
 
 const Medicine = () => {
   const [medicines, setMedicines] = useState([]);
@@ -16,9 +17,7 @@ const Medicine = () => {
     try {
       event.preventDefault();
       const key = process.env.REACT_APP_API_KEY;
-      const response = await axios.get(
-        `/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList?ServiceKey=${key}&itemName=${search}&numOfRows=10&type=json`
-      );
+      const response = await axios.get(`/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList?ServiceKey=${key}&itemName=${search}&numOfRows=10&type=json`);
       const data = response.data.body.items;
       setMedicines(data);
       setSearch("");
@@ -37,30 +36,29 @@ const Medicine = () => {
   return (
     <Fragment>
       <Menu />
-      <div>Medicine</div>
-      <form onSubmit={getMedicines}>
-        <input
-          value={search}
-          type="text"
-          placeholder="약 이름을 입력하세요."
-          onChange={onChage}
-        />
-        <button>검색</button>
-      </form>
-      <div>
-        {checkResult ? (
-          <div>{searchResult}</div>
-        ) : (
-          <div>
-            {medicines?.map((medicine) => (
-              <ul key={medicine.itemSeq}>
-                <li>{medicine.itemName}</li>
-                <li>{Parser(medicine.useMethodQesitm)}</li>
-              </ul>
-            ))}
-          </div>
-        )}
+      <div className="container">
+        <div>Medicine</div>
+        <form onSubmit={getMedicines}>
+          <input value={search} type="text" placeholder="약 이름을 입력하세요." onChange={onChage} />
+          <button>검색</button>
+        </form>
+        <div>
+          {checkResult ? (
+            <div>{searchResult}</div>
+          ) : (
+            <div>
+              {medicines?.map((medicine) => (
+                <ul key={medicine.itemSeq}>
+                  <li>{medicine.itemName}</li>
+                  <li>{Parser(medicine.useMethodQesitm)}</li>
+                  <li>{medicine.atpnWarnQesitm ? Parser(medicine.atpnWarnQesitm) : null}</li>
+                </ul>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
+      <Footer />
     </Fragment>
   );
 };
