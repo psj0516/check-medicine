@@ -34,9 +34,9 @@ const Medicine = () => {
   };
 
   return (
-    <Fragment>
+    <div className="container">
       <Menu />
-      <div className="container">
+      <div className="medicine-container">
         <div>Medicine</div>
         <form onSubmit={getMedicines}>
           <input value={search} type="text" placeholder="약 이름을 입력하세요." onChange={onChage} />
@@ -59,7 +59,7 @@ const Medicine = () => {
         </div>
       </div>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+
+.App {
+  max-width: 375px;
+  margin: auto;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* 메뉴 */
+.menu {
+  overflow: hidden;
+  transition: border 250ms ease;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  display: block;
+  padding: 10px 24px 8px;
+  margin: 5px 15px 0px 15px;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  color: #777;
+  transition: all 250ms ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.menu ul li:before,
+.menu ul li:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 44px;
+  transition: all 250ms ease;
+}
+
+.menu ul li.menu-home,
+.menu ul li.menu-home:before,
+.menu ul li.menu-home:after {
+  background-color: #f0972d;
+  color: #fff;
+}
+
+.menu ul li.menu-med,
+.menu ul li.menu-med:before,
+.menu ul li.menu-med:after {
+  background-color: #944b00;
+  color: #fff;
+}
+
+.menu ul li:before {
+  border-radius: 0 8px 0 0;
+  right: -24px;
+  transform: skew(30deg, 0deg);
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 2px 5px, inset rgba(255, 255, 255, 0.09) -1px 0;
+}
+
+.menu ul li:after {
+  border-radius: 8px 0 0 0;
+  left: -24px;
+  transform: skew(-30deg, 0deg);
+  box-shadow: rgba(0, 0, 0, 0.1) -3px 2px 5px, inset rgba(255, 255, 255, 0.09) 1px 0;
+}
+
+.menu ul li.active {
+  z-index: 3;
+}
+
+/* 홈 화면 - Header */
+.header {
+  border-top: 4px solid #f0972d;
+  height: 210px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 35px auto;
+}
+
+.header .user-name {
+  grid-column: 1 / 4;
+  height: 100%;
+  text-align: right;
+  background-color: #f0972d;
+  border-bottom: 4px solid #f0972d;
+  color: #fff;
+  padding: 0px 10px;
+}
+
+.header .user-name .name-box {
+  padding: 5px 0px;
+}
+
+.header .user-name input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  background-color: #f0972d;
+  color: #fff;
+  text-align: right;
+  font-size: 17px;
+  font-weight: 700;
+  width: 120px;
+  padding: 2px 5px;
+}
+
+.header .user-name button {
+  border: none;
+  background-color: #f0972d;
+  color: #fff;
+}
+
+.header .user-info {
+  text-align: center;
+}
+
+.header .user-info .bold {
+  color: #f0972d;
+}
+
+.header .user-info .icon {
+  padding: 15px;
+  border: 2px solid #f0972d;
+  border-radius: 100%;
+}
+
+.header .user-info .user-total {
+  margin-top: 5px;
+}
+
+.header .user-list {
+  grid-column: 2/4;
+  font-family: "Hahmlet", serif;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header .user-list .med-class {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 14px;
+  border-bottom: #f0972d 1px solid;
+}
+
+.header .user-list .med-class:nth-last-child(-n + 2) {
+  border: none;
+}
+
+.header .user-list .med-class .med-icon {
+  margin-right: 5px;
+}
+
+.header .user-list .med-class .med-amount {
+  margin-left: 5px;
+  text-align: right;
+  color: #f0972d;
+}
+
+.header .user-list .med-class:nth-child(-n + 3) {
+  grid-column: 1/3;
+  font-size: 20px;
+}
+
+.header .user-list .med-class:nth-child(4) {
+  margin-right: auto;
+}
+
+.header .user-list .med-class:nth-child(-n + 3) .med-icon {
+  width: 30px;
+  text-align: left;
+  font-size: 25px;
+}
+
+.header .user-list .med-class:nth-child(-n + 3) .med-amount {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* 의약품 화면 */
+.medicine-container {
+  border-top: 4px solid #944b00;
+  padding-top: 10px;
+}
+
+/* Footer */
