@@ -21,7 +21,7 @@ const Home = () => {
       category: "일반약",
       text: "감기약",
       cycle: "1일 1회",
-      amount: "10일분",
+      amount: "1일분",
       date: nextdate,
       checked: false,
       group: 0,
@@ -200,7 +200,7 @@ const Home = () => {
     setTodayList(today);
     const allnext = medications.filter((medication) => medication.date != todaydate && medication.date > todaydate);
     const orderedDate = allnext.sort((a, b) => new Date(a.date) - new Date(b.date));
-    const next = orderedDate.slice(0, 10);
+    const next = orderedDate.slice(0, 5);
     setNextList(next);
   };
 

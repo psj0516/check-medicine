@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import "components/Style.css";
-import "components/Modal.css";
 import "components/Home.css";
+import "components/Medicine.css";
+import "components/Modal.css";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(

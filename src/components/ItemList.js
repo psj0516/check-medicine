@@ -14,8 +14,9 @@ const List = ({ list, changeCheck, selectRemove, listday }) => {
         {list.map((item) => (
           <tr key={item.id} onClick={() => changeCheck(item.id)} className={item.checked ? "checked row" : "row"}>
             {listday === "today" ? <td>{item.checked ? <FontAwesomeIcon icon={faSquareCheck} /> : <FontAwesomeIcon icon={faSquare} />}</td> : null}
-            <td>{item.category}</td>
-            <td className="name">{item.text}</td>
+            <td className="name">
+              {item.text}&nbsp;&#40;{item.category}&#41;
+            </td>
             <td>{item.cycle}</td>
             <td>{item.amount}</td>
             <td>{item.date.substr(5)}</td>
@@ -47,7 +48,7 @@ const ItemList = ({ todayList, nextList, changeCheck, selectRemove }) => {
       </div>
       <div className="next-list">
         <div className="list-title">
-          예정 <span>(상위 10건)</span>
+          예정 <span>(상위 5건)</span>
         </div>
         <List list={nextList} changeCheck={changeCheck} selectRemove={selectRemove} listday="next" />
       </div>

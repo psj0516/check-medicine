@@ -2,10 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
 
+body {
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   max-width: 375px;
   margin: auto;
   font-size: 15px;
+  font-family: "Hahmlet", serif;
 }
 
 .container {
@@ -156,7 +165,6 @@ ul {
 
 .header .user-list {
   grid-column: 2/4;
-  font-family: "Hahmlet", serif;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -205,10 +213,31 @@ ul {
   text-align: right;
 }
 
-/* 의약품 화면 */
-.medicine-container {
-  border-top: 4px solid #944b00;
-  padding-top: 10px;
+/* Footer */
+.footer {
+  color: #fff;
+  background-color: #f0972d;
+  font-size: 12px;
+  height: 60px;
+  padding: 15px 10px 10px 10px;
+  text-align: left;
 }
 
-/* Footer */
+.footer a {
+  text-decoration: none;
+  color: #004f72;
+}
+
+.medicine-container .footer {
+  color: #fff;
+  background-color: #5db6de;
+  font-size: 12px;
+  height: 60px;
+  padding: 15px 10px 10px 10px;
+  text-align: left;
+}
+
+.medicine-container .footer a {
+  text-decoration: none;
+  color: #944b00;
+}

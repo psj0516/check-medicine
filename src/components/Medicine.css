@@ -1,0 +1,127 @@
+/* 의약품 화면 */
+.medicine-container {
+  text-align: center;
+  max-width: 375px;
+}
+
+.medicine-info {
+  background-color: #944b00;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.medicine-container .medicine-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  color: #944b00;
+}
+
+.medicine-container .medicine-search .tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.medicine-container .medicine-search .tooltip-text {
+  display: none;
+  position: absolute;
+  min-width: 220px;
+  max-width: 230px;
+  border: #944b00 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8em;
+  color: #fff;
+  background: #944b00;
+  top: 20px;
+  left: 0px;
+}
+
+.medicine-container .tooltip:hover .tooltip-text,
+.medicine-container .tooltip:active .tooltip-text {
+  display: block;
+}
+
+.medicine-container input {
+  margin-left: 10px;
+  line-height: 25px;
+  border: #944b00 2px solid;
+  outline: none;
+}
+
+.medicine-container button {
+  margin-left: 10px;
+  width: 60px;
+  line-height: 25px;
+  border: #944b00 2px solid;
+  outline: none;
+  color: #fff;
+  background-color: #944b00;
+}
+
+.medicine-container .result-title {
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #5db6de;
+}
+
+.medicine-container .search-result {
+  display: grid;
+  justify-items: center;
+  overflow-y: scroll;
+  height: calc(100vh - 207px);
+  padding-bottom: 10px;
+}
+
+.medicine-container .search-result.no-result {
+  height: calc(100vh - 282px);
+}
+
+.medicine-container .search-result::-webkit-scrollbar {
+  width: 5px;
+}
+
+.medicine-container .search-result::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: #5db6de;
+  border-radius: 10px;
+}
+
+.medicine-container .search-result::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.medicine-container .result-none {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.medicine-container .result {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  text-align: left;
+  border: #5db6de 2px solid;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.medicine-container .result p {
+  margin: 0;
+}
+
+.medicine-container .result .result-element {
+  padding: 5px 0;
+  border-bottom: #5db6de 1px dashed;
+}
+
+.medicine-container .result .result-element:nth-last-child(-n + 2) {
+  border: none;
+}

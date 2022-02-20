@@ -8,7 +8,6 @@
   padding: 5px 10px;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Hahmlet", sans-serif;
 }
 
 .list-container .today-list .list-title {
@@ -30,11 +29,11 @@
 }
 
 .list-container table .name {
-  width: 80px;
+  width: 150px;
 }
 
 .list-container table td {
-  padding: 5px 0px;
+  padding: 10px 0px;
 }
 
 .list-container .today-list svg {
@@ -62,6 +61,7 @@
 .list-container .today-list table .checked td,
 .list-container .today-list table .checked svg {
   transition: all ease 1s 0s;
+  text-decoration: line-through;
   color: #b9a896;
 }
 
@@ -79,7 +79,6 @@
   padding: 5px 0px;
   color: #fff;
   font-weight: 700;
-  font-family: "Hahmlet", serif;
 }
 
 .form-container .form-box {
