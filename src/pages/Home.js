@@ -1,5 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import Category from "components/Category";
+import { Fragment, useEffect, useState } from "react";
 import Menu from "components/Menu";
 import "moment/locale/ko";
 import Modal from "components/Modal";

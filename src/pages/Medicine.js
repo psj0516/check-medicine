@@ -45,7 +45,7 @@ const Medicine = () => {
             <form onSubmit={getMedicines}>
               <div className="tooltip">
                 <FontAwesomeIcon icon={faCircleQuestion} />
-                <span class="tooltip-text">
+                <span className="tooltip-text">
                   식품의약품안전처에서 제공하는
                   <br /> 의약품개요정보(e약은요)에 따라 <br />
                   시중에 판매되는 의약품 정보를 제공합니다.
