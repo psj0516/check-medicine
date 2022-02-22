@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/check-medicine/static/css/main.2d4f26b4.css",
+    "main.js": "/check-medicine/static/js/main.7135513b.js",
+    "static/js/787.bf1a7ca1.chunk.js": "/check-medicine/static/js/787.bf1a7ca1.chunk.js",
+    "index.html": "/check-medicine/index.html",
+    "main.2d4f26b4.css.map": "/check-medicine/static/css/main.2d4f26b4.css.map",
+    "main.7135513b.js.map": "/check-medicine/static/js/main.7135513b.js.map",
+    "787.bf1a7ca1.chunk.js.map": "/check-medicine/static/js/787.bf1a7ca1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d4f26b4.css",
+    "static/js/main.7135513b.js"
+  ]
+}
