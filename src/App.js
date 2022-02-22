@@ -10,14 +10,14 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setInit(true);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={init ? <Loading /> : <Loading />} />
+          <Route path="/" element={init ? <Home /> : <Loading />} />
           <Route path="/home" element={<Home />} />
           <Route path="/medicine" element={<Medicine />} />
         </Routes>

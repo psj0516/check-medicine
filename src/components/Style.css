@@ -245,13 +245,26 @@ ul {
 
 /* 로딩화면 */
 .container.loading {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  justify-content: center;
 }
 
 .loading .img img {
   width: 100%;
 }
 
+.loading .title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.loading .title span {
+  font-size: 1.5em;
+}
+
 .loading .info {
   text-align: center;
+  font-size: 1.2em;
 }
