@@ -7,13 +7,13 @@ import "components/Home.css";
 import "components/Medicine.css";
 import "components/Modal.css";
 import reportWebVitals from "./reportWebVitals";
-import { Router } from "react-router-dom";
+import { BaseRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <BaseRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </Router>
+    </BaseRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
