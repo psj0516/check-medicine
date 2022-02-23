@@ -16,6 +16,7 @@ const Medicine = () => {
     setSearch(event.target.value);
   };
   const getMedicines = async (event) => {
+    axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "/" : "http://apis.data.go.kr";
     try {
       event.preventDefault();
       const key = process.env.REACT_APP_API_KEY;
@@ -23,7 +24,6 @@ const Medicine = () => {
       const data = response.data.body.items;
       setMedicines(data);
       setSearch("");
-
       if (!data) {
         setSearchResult("검색 결과가 없습니다.");
         setCheckresult(true);
