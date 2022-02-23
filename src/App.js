@@ -15,11 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename="/check-medicine">
         <Routes>
           <Route path="/" element={init ? <Home /> : <Loading />} />
-          <Route path={`${precess.env.PUBLIC_URL}/home`} element={<Home />} />
-          <Route path={`${precess.env.PUBLIC_URL}/medicine`} element={<Medicine />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/medicine" element={<Medicine />} />
         </Routes>
       </BrowserRouter>
     </div>
