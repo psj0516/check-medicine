@@ -18,8 +18,8 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={init ? <Home /> : <Loading />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/medicine" element={<Medicine />} />
+          <Route path={`${precess.env.PUBLIC_URL}/home`} element={<Home />} />
+          <Route path={`${precess.env.PUBLIC_URL}/medicine`} element={<Medicine />} />
         </Routes>
       </BrowserRouter>
     </div>
