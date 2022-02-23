@@ -8,10 +8,10 @@ const Menu = () => {
     <Fragment>
       <nav className="menu">
         <ul>
-          <li className={pathName === "/home" ? "active menu-home" : "menu-home"} onClick={() => (window.location.href = "/home")}>
+          <li className={pathName === "/home" ? "active menu-home" : "menu-home"} onClick={() => (window.location.href = "/check-medicine/home")}>
             <span>나의 목록</span>
           </li>
-          <li className={pathName === "/medicine" ? "active menu-med" : "menu-med"} onClick={() => (window.location.href = "/medicine")}>
+          <li className={pathName === "/medicine" ? "active menu-med" : "menu-med"} onClick={() => (window.location.href = "/check-medicine/medicine")}>
             <span>의약품 정보</span>
           </li>
         </ul>
