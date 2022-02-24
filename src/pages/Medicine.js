@@ -16,7 +16,7 @@ const Medicine = () => {
     setSearch(event.target.value);
   };
   const getMedicines = async (event) => {
-    axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "/" : "http://apis.data.go.kr";
+    axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "/" : "https://check-medicine.herokuapp.com/http://apis.data.go.kr";
     try {
       event.preventDefault();
       const key = process.env.REACT_APP_API_KEY;
