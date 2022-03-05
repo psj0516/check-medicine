@@ -49,6 +49,8 @@ const Medicine = () => {
                   식품의약품안전처에서 제공하는
                   <br /> 의약품개요정보(e약은요)에 따라 <br />
                   시중에 판매되는 의약품 정보를 제공합니다.
+                  <br />
+                  검색에 다소 시간이 소요될 수 있습니다.
                 </span>
               </div>
               <input value={search} type="text" placeholder="약 이름을 입력하세요." onChange={onChage} />
